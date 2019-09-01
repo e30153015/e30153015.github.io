@@ -121,5 +121,3 @@ whosName();
  name = '小明';
  // console.log('小明')
 ```
-
-testetetsete
