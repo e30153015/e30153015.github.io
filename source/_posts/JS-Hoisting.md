@@ -121,3 +121,48 @@ whosName();
  name = '小明';
  // console.log('小明')
 ```
+
+```js
+// 練習題
+whosName();
+function whosName(){
+  if (name) {
+    name = '杰倫'
+  }
+}
+var name = '小明';
+console.log(name);   // 小明
+
+// 拆解
+// 創造階段
+function whosName(){
+  ...
+}
+var name;
+// 執行階段-1
+whosName();
+ name = '小明';
+ // console.log('小明')
+```
+
+```js
+// 練習題-2
+function sayHi(){
+  var a = "Mary";
+  a = "Tom";
+}
+var a = 'Casper';
+sayHi();
+console.log(a); // Casper
+// function 執行環境的變數只會存在於該 function下
+```
+
+```js
+// 練習題-2-1
+function sayHi(){
+  a = "Tom";
+}
+var a = 'Casper';
+sayHi();
+console.log(a); // Tom
+```
