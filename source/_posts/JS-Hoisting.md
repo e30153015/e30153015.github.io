@@ -4,7 +4,7 @@ date: 2019-08-29 10:44:45
 tags: Javascript
 categories: 六角學院-JS進階
 ---
-# Hoisting
+# JS-Hoisting
 
 將JS拆成兩個階段
 * 創造階段
