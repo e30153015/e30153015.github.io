@@ -91,7 +91,7 @@ scheme: Pisces
 ```
 ## 佈署至GitHub
 在GitHub上新增GitHub Pages
-1. 在GitHub 創建一個名稱為<username>.github.io 的專案
+1. 在GitHub 創建一個名稱為\<username>\.github.io 的專案
 2. 安装 deploy git 插件
 ```bash
 npm install hexo-deployer-git --save
@@ -106,3 +106,16 @@ deploy:
 ```
 4. 執行 hexo d 即可發佈到 GitHub 上
 接下來就可以到你的網站\<username>\.github.io
+
+## 不同設備同步方式
+clone git資料庫並切換branch至`hexo`
+```bash
+git clone -b hexo [email protected].com:yourname/yourname.github.io.git  //將Github中hexo分支clone到本地
+cd  yourname.github.io  //切換到剛剛clone的資料夾內
+npm install    //注意，這裡一定要切換到剛剛clone的資料夾內執行，安裝必要的所需元件，不用再init
+hexo new post "new blog name"   //新建一個.md檔案，並編輯完成自己的部落格內容
+git add source  //經測試每次只要更新sorcerer中的檔案到Github中即可，因為只是新建了一篇新部落格
+git commit -m "XX"
+git push origin hexo  //更新分支
+hexo d -g   //push更新完分支之後將自己寫的部落格對接到自己搭的部落格網站上，同時同步了Github中的master
+```
